@@ -4,48 +4,101 @@
 	<meta charset="UTF-8">
 	<title>Infinite Scroll Ajax</title>
 	<!-- Latest compiled and minified CSS -->
-	<!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous"> -->
-	<link rel="stylesheet" type="text/css" href="infinite_scroll_ajax.css">
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-	<script src="infinite_scroll_ajax.js"></script>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="timeline_infinite_scroll_ajax.css">
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+	<script type="text/javascript" src="http://ajax.cdnjs.com/ajax/libs/modernizr/1.7/modernizr-1.7.min.js"></script>
+	<script src="timeline_infinite_scroll_ajax.js"></script>
 </head>
 <body>
 	<div class="row">
-		<div class="col-sm-offset-1 col-sm-10">
-			<div class="timeline">
-			    <div class="timeline-item active">
-			        <div class="year">2008 <span class="marker"><span class="dot"></span></span>
-			        </div>
-			        <div class="info">That song the artist formerly known as prince sang no longer applies.</div>
-			    </div>
-			    <div class="timeline-item">
-			        <div class="year">2008 <span class="marker"><span class="dot"></span></span>
-			        </div>
-			        <div class="info">The in-house Gawker chat room is filled with photos of Rob Ford, and for one reason: Rob Ford takes a good goddamn photo.</div>
-			    </div>
-			    <div class="timeline-item">
-			        <div class="year">2008 <span class="marker"><span class="dot"></span></span>
-			        </div>
-			        <div class="info">That song the artist formerly known as prince sang no longer applies.</div>
-			    </div>
-			    <div class="timeline-item">
-			        <div class="year">2008 <span class="marker"><span class="dot"></span></span>
-			        </div>
-			        <div class="info">The in-house Gawker chat room is filled with photos of Rob Ford, and for one reason.The in-house Gawker chat room is filled with photos of Rob Ford, and for one reason.The in-house Gawker chat room is filled with photos of Rob Ford, and for one reason.</div>
-			    </div>
-			    <div class="timeline-item">
-			        <div class="year">2008 <span class="marker"><span class="dot"></span></span>
-			        </div>
-			        <div class="info">That song the artist formerly known as prince sang no longer applies.</div>
-			    </div>
-			    <div class="timeline-item">
-			        <div class="year">2008 <span class="marker"><span class="dot"></span></span>
-			        </div>
-			        <div class="info">The in-house Gawker chat room is filled with photos of Rob Ford, and for one reason.The in-house Gawker chat room is filled with photos of Rob Ford, and for one reason.The in-house Gawker chat room is filled with photos of Rob Ford, and for one reason.</div>
-			    </div>
-			</div>
+		<div class="col-sm-12">
+			<section id="cd-timeline" class="cd-container">
+				<div class="cd-timeline-block" id="right">
+					<div class="cd-timeline-img cd-2">
+						<i class="fa fa-envelope fa-2x"></i>
+					</div>
+
+					<div class="cd-timeline-content">
+						<h2>Title of section 1</h2>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto, optio, dolorum provident rerum aut hic quasi placeat iure tempora laudantium ipsa ad debitis unde? Iste voluptatibus minus veritatis qui ut.</p>
+						<span class="cd-date">Jan 14</span>
+					</div>
+				</div>
+
+				<div class="cd-timeline-block">
+					<div class="cd-timeline-content">
+						<h2>Title of section 1</h2>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto, optio, dolorum provident rerum aut hic quasi placeat iure tempora laudantium ipsa ad debitis unde? Iste voluptatibus minus veritatis qui ut.</p>
+						<span class="cd-date">Jan 14</span>
+					</div>
+				</div>
+
+				<div class="cd-timeline-block">
+					<div class="cd-timeline-img cd-1">
+						<i class="fa fa-envelope fa-2x"></i>
+					</div> <!-- cd-timeline-img -->
+
+					<div class="cd-timeline-content">
+						<h2>Title of section 2</h2>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto, optio, dolorum provident rerum aut hic quasi placeat iure tempora laudantium ipsa ad debitis unde?</p>
+						<span class="cd-date">Jan 18</span>
+					</div> <!-- cd-timeline-content -->
+				</div> <!-- cd-timeline-block -->
+
+				<div class="cd-timeline-block" id="right">
+					<div class="cd-timeline-img cd-2">
+						<i class="fa fa-envelope fa-2x"></i>
+					</div> <!-- cd-timeline-img -->
+
+					<div class="cd-timeline-content">
+						<h2>Title of section 3</h2>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi, obcaecati, quisquam id molestias eaque asperiores voluptatibus cupiditate error assumenda delectus odit similique earum voluptatem doloremque dolorem ipsam quae rerum quis. Odit, itaque, deserunt corporis vero ipsum nisi eius odio natus ullam provident pariatur temporibus quia eos repellat consequuntur perferendis enim amet quae quasi repudiandae sed quod veniam dolore possimus rem voluptatum eveniet eligendi quis fugiat aliquam sunt similique aut adipisci.</p>
+						<span class="cd-date">Jan 24</span>
+					</div> <!-- cd-timeline-content -->
+				</div> <!-- cd-timeline-block -->
+
+				<div class="cd-timeline-block" id="right">
+					<div class="cd-timeline-img cd-2">
+						<i class="fa fa-envelope fa-2x"></i>
+					</div> <!-- cd-timeline-img -->
+
+					<div class="cd-timeline-content">
+						<h2>Title of section 4</h2>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto, optio, dolorum provident rerum aut hic quasi placeat iure tempora laudantium ipsa ad debitis unde? Iste voluptatibus minus veritatis qui ut.</p>
+						<span class="cd-date">Feb 14</span>
+					</div> <!-- cd-timeline-content -->
+				</div> <!-- cd-timeline-block -->
+
+				<div class="cd-timeline-block" id="right">
+					<div class="cd-timeline-img cd-2">
+						<i class="fa fa-envelope fa-2x"></i>
+					</div> <!-- cd-timeline-img -->
+
+					<div class="cd-timeline-content">
+						<h2>Title of section 5</h2>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto, optio, dolorum provident rerum.</p>
+						<span class="cd-date">Feb 18</span>
+					</div> <!-- cd-timeline-content -->
+				</div> <!-- cd-timeline-block -->
+
+				<div class="cd-timeline-block">
+					<div class="cd-timeline-img cd-1">
+						<i class="fa fa-envelope fa-2x"></i>
+					</div> <!-- cd-timeline-img -->
+
+					<div class="cd-timeline-content">
+						<h2>Final Section</h2>
+						<p>This is the content of the last section</p>
+						<span class="cd-date">Feb 26</span>
+					</div> <!-- cd-timeline-content -->
+				</div> <!-- cd-timeline-block -->
+			</section> <!-- cd-timeline -->
 		</div>
 	</div>
-	<div id="loader" style="height: 50px"></div>
+	<div class="row">
+		<div id="loader"></div>
+	</div>
 </body>
 </html>
