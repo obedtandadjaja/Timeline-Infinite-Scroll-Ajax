@@ -46,64 +46,75 @@ jQuery(document).ready(function($)
 		});
 	}
 
-	$(window).scroll(function(){
-	    // when scroll is at 90%
-		if($(window).scrollTop() >= ($(document).height() - $(window).height())*0.8)
+	function check_scroll()
+	{
+		if(near_bottom_of_page())
 		{
 			$('#loader').show();
-			// change the ajax setting below according to your needs
-			// var url_ajax = null;
-			// var data_ajax = null;
-			// $.ajax(
-			// {
-	  //           url: url_ajax,
-	  //           data: data_ajax,
-	  //           cache: false,
-	  //           processData: false,
-	  //           contentType: false,
-	  //           mimeType: 'multipart/form-data',
-	  //           type: 'POST',
-	  //           beforeSend: function ()
-	  //           {
-	  //               // display loading
-	  //               $('#loader').show();
-	  //               return true;
-	  //           }
-	  //       })
-	  //       .done(function()
-	  //       {
-	  //           // Display the new data
-	  //       })
-	  //       .fail(function(xhr)
-	  //       {
-	  //           // fetch the error messages
-	  //           var error_message = [];
-	  //           if (xhr.status === 422)
-	  //           {
-	  //               var response = JSON.parse(xhr.responseText);
-	  //               for(var attribute in response)
-	  //               {
-	  //                   response[attribute].forEach(function (text)
-	  //                   {
-	  //                       error_message.push(text);
-	  //                   });
-	  //               }
-	  //           }
-	  //           else if (xhr.status === 401)
-	  //           {
-	  //               error_message.push('Unauthorized!');
-	  //           }
-	  //           else
-	  //           {
-	  //               error_message.push('Server error!');
-	  //           }
-	  //           alert(error_message);
-	  //       })
-	  //       .always(function()
-	  //       {
-	  //           // hide loading
-	  //           $('#loader').hide();
-	  //       });
+			change the ajax setting below according to your needs
+			var url_ajax = null;
+			var data_ajax = null;
+			$.ajax(
+			{
+	            url: url_ajax,
+	            data: data_ajax,
+	            cache: false,
+	            processData: false,
+	            contentType: false,
+	            mimeType: 'multipart/form-data',
+	            type: 'POST',
+	            beforeSend: function ()
+	            {
+	                // display loading
+	                $('#loader').show();
+	                return true;
+	            }
+	        })
+	        .done(function(data)
+	        {
+	            // Display the new data here according to the data
+	        })
+	        .fail(function(xhr)
+	        {
+	            // fetch the error messages
+	            var error_message = [];
+	            if (xhr.status === 422)
+	            {
+	                var response = JSON.parse(xhr.responseText);
+	                for(var attribute in response)
+	                {
+	                    response[attribute].forEach(function (text)
+	                    {
+	                        error_message.push(text);
+	                    });
+	                }
+	            }
+	            else if (xhr.status === 401)
+	            {
+	                error_message.push('Unauthorized!');
+	            }
+	            else
+	            {
+	                error_message.push('Server error!');
+	            }
+	            alert(error_message);
+	        })
+	        .always(function()
+	        {
+	            // hide loading
+	            $('#loader').hide();
+	        });
 		}
-  	});
+		else
+		{
+			setTimeout(check_scroll, 250);
+		}
+	}
+
+	function near_bottom_of_page()
+	{
+		return $(window).scrollTop() >= ($(document).height() - $(window).height())*0.8
+	}
+
+	check_scroll();
 });
