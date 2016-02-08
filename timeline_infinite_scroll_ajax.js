@@ -53,7 +53,7 @@ jQuery(document).ready(function($)
 	       	{
 	       		$('#loader_bottom').show();
 
-	       		alert("trigger ajax previous");
+	       		alert("trigger ajax next");
 	       		// ** UNCOMMENT THIS **
 				// $.ajax({
 				//     url: "URL", 					// change this
@@ -95,7 +95,7 @@ jQuery(document).ready(function($)
 	   		{
 	   			$('#loader_top').show();
 				
-				alert("trigger ajax next");
+				alert("trigger ajax previous");
 				// ** UNCOMMENT THIS **
 	   			// var firstMsg = $('.cd-timeline-block:first');
 
