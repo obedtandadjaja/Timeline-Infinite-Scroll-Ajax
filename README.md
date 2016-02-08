@@ -11,8 +11,9 @@ demo: http://htmlpreview.github.io/?https://github.com/obedtandadjaja/Timeline-I
 1. Clone this repository
 2. Copy Paste the javascript and css to your project's directory
 3. Look at the test.html for an example of how to use this plugin
-4. Modify the AJAX setting in the javascript according to your needs
-5. Modify the icons, color, text size, etc. in the HTML and CSS files
+4. Uncomment the AJAX
+5. Modify the AJAX setting in the javascript according to your needs
+6. Modify the icons, color, text size, etc. in the HTML and CSS files
 
 ### Thanks to
 1. Codyhouse.com for the timeline design
