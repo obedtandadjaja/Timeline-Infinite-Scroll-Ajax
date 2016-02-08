@@ -53,36 +53,37 @@ jQuery(document).ready(function($)
 	       	{
 	       		$('#loader_bottom').show();
 
-				$.ajax({
-				    url: "URL", 					// change this
-				    type: 'PUT', 					// POST | PUT | GET | etc
-				    data: { data: "data" }, 		// change this
-				    dataType: "json", 				// change the data type according to your needs
-				    success: function (response)	// if success do this
-				    {
-				    	console.log(response);
-						$('#loader_bottom').slideUp();
-						$.each(response, function(key, value)
-						{
-							$(".cd-container").append(
-								'<div class="cd-timeline-block">'+
-									'<div class="cd-timeline-img cd-1">'+ // to change sides change cd-1 to cd-2
-										'<i class="fa fa-envelop fa-3x" style="line-height:27px; margin-left:-12px;"></i>'+
-									'</div>'+
-									'<div class="cd-timeline-content">'+
-										'<h2>'+ value.title +'</h2>'+ // modify this according to your json response
-										'<p>'+ value.message +'</p>'+ // modify this according to your json response
-										'<span class="cd-date"><%= message.time_sent.strftime("%e %B, %Y %I:%M%p") %></span>'+
-									'</div>'+
-								'</div>'
-							);
-						});
-				    },
-				    error: function (response)
-				    {
-				    	alert("Something appears to be wrong");
-				    }
-				});
+	       		// ** UNCOMMENT THIS **
+				// $.ajax({
+				//     url: "URL", 					// change this
+				//     type: 'PUT', 					// POST | PUT | GET | etc
+				//     data: { data: "data" }, 		// change this
+				//     dataType: "json", 				// change the data type according to your needs
+				//     success: function (response)	// if success do this
+				//     {
+				//     	console.log(response);
+				// 		$('#loader_bottom').slideUp();
+				// 		$.each(response, function(key, value)
+				// 		{
+				// 			$(".cd-container").append(
+				// 				'<div class="cd-timeline-block">'+
+				// 					'<div class="cd-timeline-img cd-1">'+ // to change sides change cd-1 to cd-2
+				// 						'<i class="fa fa-envelop fa-3x" style="line-height:27px; margin-left:-12px;"></i>'+
+				// 					'</div>'+
+				// 					'<div class="cd-timeline-content">'+
+				// 						'<h2>'+ value.title +'</h2>'+ // modify this according to your json response
+				// 						'<p>'+ value.message +'</p>'+ // modify this according to your json response
+				// 						'<span class="cd-date"><%= message.time_sent.strftime("%e %B, %Y %I:%M%p") %></span>'+
+				// 					'</div>'+
+				// 				'</div>'
+				// 			);
+				// 		});
+				//     },
+				//     error: function (response)
+				//     {
+				//     	alert("Something appears to be wrong");
+				//     }
+				// });
 
 				$('#loader_bottom').slideDown();
 	       	}
@@ -93,44 +94,45 @@ jQuery(document).ready(function($)
 	   		{
 	   			$('#loader_top').show();
 				
-	   			var firstMsg = $('.cd-timeline-block:first');
+				// ** UNCOMMENT THIS **
+	   			// var firstMsg = $('.cd-timeline-block:first');
 
-			    // Where the page is currently:
-			    var curOffset = firstMsg.offset().top - $(document).scrollTop();
+			 	// // Where the page is currently:
+			 	// var curOffset = firstMsg.offset().top - $(document).scrollTop();
 
-				$.ajax({
-				    url: "URL", 					// change this
-				    type: 'PUT', 					// POST | PUT | GET | etc
-				    data: { data: "data" }, 		// change this
-				    dataType: "json", 				// change the data type according to your needs
-				    success: function (response)	// if success do this
-				    {
-				    	console.log(response);
-						$('#loader_bottom').slideUp();
-						$.each(response, function(key, value)
-						{
-							$(".cd-container").prepend(
-								'<div class="cd-timeline-block">'+
-									'<div class="cd-timeline-img cd-1">'+ // to change sides change cd-1 to cd-2
-										'<i class="fa fa-envelop fa-3x" style="line-height:27px; margin-left:-12px;"></i>'+
-									'</div>'+
-									'<div class="cd-timeline-content">'+
-										'<h2>'+ value.title +'</h2>'+ // modify this according to your json response
-										'<p>'+ value.message +'</p>'+ // modify this according to your json response
-										'<span class="cd-date"><%= message.time_sent.strftime("%e %B, %Y %I:%M%p") %></span>'+
-									'</div>'+
-								'</div>'
-							);
-						});
-				    },
-				    error: function (response)
-				    {
-				    	alert("Something appears to be wrong");
-				    }
-				});
+				// $.ajax({
+				//     url: "URL", 					// change this
+				//     type: 'PUT', 					// POST | PUT | GET | etc
+				//     data: { data: "data" }, 		// change this
+				//     dataType: "json", 				// change the data type according to your needs
+				//     success: function (response)	// if success do this
+				//     {
+				//     	console.log(response);
+				// 		$('#loader_bottom').slideUp();
+				// 		$.each(response, function(key, value)
+				// 		{
+				// 			$(".cd-container").prepend(
+				// 				'<div class="cd-timeline-block">'+
+				// 					'<div class="cd-timeline-img cd-1">'+ // to change sides change cd-1 to cd-2
+				// 						'<i class="fa fa-envelop fa-3x" style="line-height:27px; margin-left:-12px;"></i>'+
+				// 					'</div>'+
+				// 					'<div class="cd-timeline-content">'+
+				// 						'<h2>'+ value.title +'</h2>'+ // modify this according to your json response
+				// 						'<p>'+ value.message +'</p>'+ // modify this according to your json response
+				// 						'<span class="cd-date"><%= message.time_sent.strftime("%e %B, %Y %I:%M%p") %></span>'+
+				// 					'</div>'+
+				// 				'</div>'
+				// 			);
+				// 		});
+				//     },
+				//     error: function (response)
+				//     {
+				//     	alert("Something appears to be wrong");
+				//     }
+				// });
 
-				// Offset to previous first message minus original offset/scroll
-			    $(document).scrollTop(firstMsg.offset().top-curOffset);
+				// // Offset to previous first message minus original offset/scroll
+			 	// $(document).scrollTop(firstMsg.offset().top-curOffset);
 
 				$('#loader_top').slideUp();
 	   		}
