@@ -10,18 +10,15 @@ demo: http://htmlpreview.github.io/?https://github.com/obedtandadjaja/Timeline-I
 #### Screenshots - Auto Adjust to different screen sizes
 Large screens (laptop/desktop)
 
-![Image of Large]
-(https://github.com/obedtandadjaja/Timeline-Infinite-Scroll-Ajax/blob/master/screenshot-large.png)
+![Image of Large](https://github.com/obedtandadjaja/Timeline-Infinite-Scroll-Ajax/blob/master/screenshot-large.png)
 
 Medium screens (ipad/tables)
 
-![Image of Medium]
-(https://github.com/obedtandadjaja/Timeline-Infinite-Scroll-Ajax/blob/master/screenshot-medium.png)
+![Image of Medium](https://github.com/obedtandadjaja/Timeline-Infinite-Scroll-Ajax/blob/master/screenshot-medium.png)
 
 Small screens (smart phones)
 
-![Image of Small]
-(https://github.com/obedtandadjaja/Timeline-Infinite-Scroll-Ajax/blob/master/screenshot-small.png)
+![Image of Small](https://github.com/obedtandadjaja/Timeline-Infinite-Scroll-Ajax/blob/master/screenshot-small.png)
 
 #### How to use
 1. Clone this repository
